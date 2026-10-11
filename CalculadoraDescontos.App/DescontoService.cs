@@ -26,8 +26,8 @@ namespace CalculadoraDescontos.App
 
         public int CalcularDescontoPorPercentual(int valorOriginal, int percentualDesconto)
         {
-            int valorComDesconto = valorOriginal * (percentualDesconto / 100);
-            return valorComDesconto;
+           decimal valorFinal = valorOriginal * (1 - percentualDesconto / 100m);
+            return (int)valorFinal;
         }
 
         public bool EValidoParaCupom(int idade, bool priemiraCompra)
